@@ -1,0 +1,659 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  transition: 0.5s ease;
+}
+
+body {
+  overflow-x:hidden;
+  font-family:sans-serif;
+}
+
+.nav-bar {
+  display:flex;
+  width:100%;
+  height:9vh;
+  background-color:white;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.available {
+  position:absolute;
+  transform:rotate(270deg);
+  transform-origin: (0, 0);
+  top:24px;
+  left:-25px;
+  background-color:rgb(89, 202, 45);
+  font-size:15px;
+  padding: 0 3px;
+  color:white;
+  border-radius: 2px;
+}
+
+.logo {
+  width:50px;
+  height:auto;
+}
+
+.logo-img {
+  display:block;
+  height:auto;
+  width:100%;
+}
+
+.nav-bar-links {
+  display:flex;
+  width:600px;
+  justify-content: space-evenly;
+}
+
+.nav-item {
+  font-weight:600;
+  display:flex;
+  border-bottom:3px solid black;
+  height:4vh;
+  align-items:center;
+  cursor:pointer;
+}
+
+.nav-item:hover {
+  background:-webkit-radial-gradient(rgb(4, 115, 241), rgb(192, 9, 9));
+  -webkit-background-clip: text;
+  background-clip:text;
+  -webkit-text-fill-color: transparent;
+}
+
+.body {
+  display:flex;
+  background-color:rgb(235, 234, 234);
+  position:absolute;  
+}
+
+.nav-icons {
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
+
+.burger {
+  width:30px;
+  height:30px;
+  display:flex;
+  flex-direction:column;
+  border:2px solid #000;
+  align-items:center;
+  justify-content: space-around;
+  display:none;
+}
+
+.burger-line {
+  background-color: #000;
+  height:5px;
+  width:90%;
+}
+
+@media Screen and (max-width:720px) {
+  .nav-bar {
+    justify-content: space-between;
+  }
+  .logo {
+    margin-left:20px;
+  }
+
+  .burger{
+    margin-right:20px;
+  }
+
+  .nav-bar-links {
+    position:fixed;
+    top:9vh;
+    height:91vh;
+    width:100%;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-around;
+    background-color: rgba(0, 0, 0);
+    color:white;
+    z-index:999;
+    transform:translateY(-120%);
+    transition:transform 0.5s ease-in;
+  }
+
+  .nav-item {
+    font-size:18px;
+  }
+
+  .active {
+    transform:translateY(0%);
+  }
+
+  .burger {
+    display:flex;
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px)
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px)
+}
+
+.side-menu {
+  display: inline-block;
+  width:15vw;
+  background-color:white;
+  height:90vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content: space-around;
+  border-top:2px solid rgb(235, 234, 234);
+}
+.size-title, .gender-title {
+  font-size:16px;
+}
+.white{
+  border:1px solid grey;
+}
+
+.colour {
+  border-bottom:1px solid grey;
+  width:100px;
+}
+ 
+
+.size-opt, .sex {
+  background-color:grey;
+  padding:2px 5px;
+  margin-bottom:8px;
+  border-radius:10px;
+  width:auto;
+}
+
+.explore-exp-btn, .explore-btn {
+  background-color:black;
+  color:white;
+  padding:5px 15px;
+  border:none;
+  border-radius: 5px;
+}
+
+.money{
+  background-color:black;
+  color:white;
+  padding:3px 5px;
+  border:none;
+  border-radius: 2px;
+  font-size:13px;
+}
+
+.color-opt{
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  display:inline-block;
+  margin:3px 3px;
+}
+
+.plus {
+  background-color:grey;
+  color:white;
+  border-radius:50%;
+  padding:2px 6px;
+}
+
+.shoes-cont {
+  width:85vw;
+}
+
+.shoe-header-cont {
+  width:89%;
+  height:25vh;
+  margin:0 auto;
+  display:flex;
+  align-items: center;
+}
+
+.shoes-header {
+  width:100%;
+  height:60%;
+  background-color:white;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
+
+.logo-redbg {
+  width:40%;
+  background:url('Nike wear\\\\wallpaper-10.jpg');
+  height:100%;
+  display:flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.logo-cont {
+  width:50px;
+  height:auto;
+  position: relative;
+  right:50px;
+}
+.redbg-img {
+  display:block;
+  width:100%;
+  height:auto;
+}
+.gen-exp {
+  width:60%;
+  height:60%;
+  display:flex;
+  align-items:center;
+  justify-content: space-around;
+  background-color:white;
+}
+
+.gen {
+  width:50%;
+  border-right:1px solid black;
+  margin:auto 25px;
+}
+
+.new-gen {
+  text-transform:uppercase;
+  margin-bottom:5px;
+}
+.new-gen-slang {
+  font-size:12px;
+}
+
+.exp {
+  width:50%;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
+
+.shoe-display-cont {
+  width:89%;
+  height:75%;
+  margin:0 auto;
+}
+
+.shoe-display {
+  display:grid;
+  grid-template-columns: 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap:20px;
+  grid-column-gap:30px;
+}
+
+.shoe-container {
+  width:85%;
+  height:210px;
+  position:relative;
+}
+
+.shoe-img-container {
+  width: 100%;
+  height:auto;
+  background-color:white;
+  position:relative;
+  bottom:10px;
+}
+
+.shoe-image {
+  width: 100%;
+  display:block;  
+}
+
+.shoe-words {
+  position:absolute;
+  bottom:0px;
+  background-color:white;
+  height:90px;
+}
+
+.show-word h4, .show-word p, .price{
+  width:80%;
+  margin:0 0 0 10px;
+}
+
+.show-word h4 {
+  font-size:11px;
+}
+
+.price {
+  display:flex;
+  justify-content: space-around;
+  margin-top:10px;
+}
+
+.show-word p{
+  font-size:10px;
+  line-height:11px;
+  border-bottom: 1px solid grey;
+}
+
+@media Screen and (max-width:1167px) {
+  .shoes-cont {
+    width:95%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+  }
+  .shoe-header-cont {
+    width:100%;
+  }
+  .shoe-display{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+    width:100%;
+  }
+  .shoe-container{
+    height:250px;
+    width:200px;
+  }
+  .side-menu{
+    display:none;
+  }
+  .body {
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .shoe-display-cont {
+    width:100%;
+  }
+}
+
+@media Screen and (max-width:760px) {
+  .exp {
+    display:none;
+  }
+  .gen {
+    width:95%;
+    border-right:none;
+  }
+}
+
+.login-page {
+  height:90vh;
+  width:100vw;
+  display:flex;
+  background-color:rgb(235, 234, 234);
+  align-items:center;
+  justify-content: center;
+  position:absolute;
+  display:none;
+}
+
+.login-form-box {
+  width:80vw;
+  height:80vh;
+  display:flex;
+}
+
+.login-img {
+  width:100%;
+  height:100%;
+}
+
+.login-image {
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.login-form {
+  background-color:white;
+  width:100%;
+  height:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome {
+  width:70%;
+  height:85%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.welcome-logo {
+  text-align:center;
+}
+
+.form-input {
+  width:100%;
+}
+
+.inline-input {
+  width:49%;
+  display:inline-block;
+  margin:0 auto;
+}
+
+.form-input, .inline-input{
+  margin-top:20px;
+  padding:5px 10px;
+  border:1px solid grey;
+  border-radius: 5px;
+  line-height:25px;
+  font-size:16px;
+}
+
+.signup-btn {
+  background-color:black;
+  color:white;
+}
+
+.already {
+  text-align:center;
+  font-weight:600;
+}
+
+.already a {
+  color:black;
+  text-decoration: none;
+}
+
+@media Screen and (max-width:760px) {
+  .login-img {
+    display:none;
+  }
+  .login-form-box {
+    width:90%;
+    background: url('Nike wear/jordan-jumpman-classics-lightweight-fleece-sweatshirt-dwvpZ7.jpg') no-repeat fixed center;
+  }
+
+  .login-form {
+    background-color:rgba(145, 143, 143, 0.5); 
+  }
+}
+
+.signup-page {
+  height:90vh;
+  width:100vw;
+  display:flex;
+  background-color:rgb(235, 234, 234);
+  align-items:center;
+  justify-content: center;
+  position:absolute;
+  display:none;
+}
+
+.product{
+  height:90vh;
+  width:100vw;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  display:none;
+}
+
+.product-container {
+  width:80vw;
+  height:75vh;
+  display:flex;
+}
+
+.product-imgs {
+  display:grid;
+  width:50%;
+  padding:10px;
+  grid-template-columns: repeat(10, 2fr);
+  grid-template-rows:repeat(10,8%);
+  grid-gap:15px;
+}
+
+.img {
+  display:block;
+  height:100%;
+  width:100%;
+  object-fit:cover;
+}
+
+.gellery-item_1 {
+  grid-column-start: 1;
+  grid-column-end:7;
+  grid-row-start:1;
+  grid-row-end:10;
+}
+
+.gellery-item_2 {
+  grid-column-start:7;
+  grid-column-end:10;
+  grid-row-start:1;
+  grid-row-end:4;
+}
+.gellery-item_3 {
+  grid-column-start:7;
+  grid-column-end:10;
+  grid-row-start:4;
+  grid-row-end:7;
+}
+.gellery-item_4 {
+  grid-column-start:7;
+  grid-column-end:10;
+  grid-row-start:7;
+  grid-row-end:10;
+}
+
+.product-desc {
+  width:50%;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
+
+.product-desc-container {
+  width:400px;
+  background-color:white;
+  height:500px;
+  display:flex;
+  flex-direction:column;
+  justify-content: space-around;
+}
+
+.desc-word {
+  line-height:20px;
+  padding-bottom:10px;
+  border-bottom:1px solid grey;
+}
+
+.desc-word p {
+  color:grey;
+}
+
+.choices{
+  display:flex;
+  width:100%;
+}
+
+.size-shoe {
+  width:50%;
+  display:flex;
+  flex-direction:column;
+  border-right:1px solid grey;
+  margin:0 auto;
+}
+
+.buttons {
+  width:185px;
+  
+}
+.sizes-btn {
+  padding:6px 13px;
+  border-radius:10px;
+  margin:8px;
+  border:1px solid grey;
+  font-weight:600;
+}
+.quantity {
+  width:50%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.quantity-section{
+  display:flex;
+  flex-direction:column;
+  justify-content: space-around;
+  align-items:center;
+  height:100%;
+}
+
+.quantity input, .quantity button {
+  padding:5px 10px;
+  width:50%;
+  margin:0 auto;
+  border:1px solid grey;
+  border-radius:5px;
+}
+
+.quantity button{
+  color:white;
+  background-color:blue;
+}
+
+.price-tag {
+  width:100%;
+}
+
+.price-tag button {
+  width:100%;
+  padding:12px 0;
+  margin-bottom:10px;
+  border:2px solid black;
+}
+
+.learn {
+  text-align:center;
+  margin-top:-55px;
+}
+
+@media Screen and (max-width:700px) {
+  .product-container {
+    flex-direction:column;
+  }
+  .product-imgs {
+    width:95%;
+  }
+  .product-desc {
+    width:95%;
+  }
+}
