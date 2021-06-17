@@ -111,6 +111,10 @@ function toggleDisplay () {
           });
         }
       }(i));
+      let navLinks = document.querySelector('.nav-bar-links')
+      navLinks.classList.remove("active");
+      let burger = document.querySelector('.burger')
+      burger.classList.remove("toggle")
     })
   }
 }
