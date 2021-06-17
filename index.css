@@ -94,7 +94,7 @@ body {
   width:90%;
 }
 
-@media Screen and (max-width:720px) {
+@media Screen and (max-width:699px) and (min-width:140px) {
   .nav-bar {
     justify-content: space-between;
   }
@@ -377,7 +377,7 @@ body {
   }
 }
 
-@media Screen and (max-width:760px) {
+@media Screen and (max-width:699px) and (min-width:140px) {
   .exp {
     display:none;
   }
@@ -470,7 +470,7 @@ body {
   text-decoration: none;
 }
 
-@media Screen and (max-width:760px) {
+@media Screen and (max-width:699px) and (min-width:140px) {
   .login-img {
     display:none;
   }
@@ -646,7 +646,7 @@ body {
   margin-top:-55px;
 }
 
-@media Screen and (max-width:700px) {
+@media Screen and (max-width:699px) and (min-width:140px) {
   .product-container {
     flex-direction:column;
   }
